@@ -1,0 +1,49 @@
+body { padding-top: 70px; }
+.navbar {
+  background: #ffffff; opacity: 0.8; filter: alpha(opacity=50);
+}
+
+.container {
+  max-width: 800px; }
+.header {
+  margin-top: 6rem;
+  text-align: left; }
+.jumbotron {
+  background-color:transparent !important;
+}
+
+.literary-quote {
+  border:0;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.literary-quote p {
+  display: inline;
+  font-size: medium;
+}
+
+.literary-quote p:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.literary-quote p:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.spaced-item {
+  padding: 10px 0px;
+}
