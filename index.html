@@ -25,24 +25,18 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light navbarScroll" role="navigation">
+<nav class="navbar navbar-expand fixed-top navbar-light" role="navigation">
   <div class="container">
 
-    <a class="navbar-brand" href="https://aqualab.cs.northwestern.edu">
+    <a class="navbar-brand me-2 flex-shrink-0" href="https://aqualab.cs.northwestern.edu" title="AquaLab">
       <img src="AquaLab6.png"
 	   alt="AquaLab" style="width:50px;" class="rounded"></a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <nav class="nav nav-tabs">
-        <a class="nav-link active" href="#home" data-bs-toggle="tab" role="tab">Home</a>
-        <a class="nav-link" href="#bio"  data-bs-toggle="tab" role="tab">Bio</a>
-        <a class="nav-link" href="#teaching" data-bs-toggle="tab" role="tab">Teaching</a>
-        <a class="nav-link" href="#random" data-bs-toggle="tab" role="tab">Random</a>
-      </nav>
+    <div class="nav nav-tabs flex-nowrap overflow-auto" role="tablist" aria-label="Sections">
+      <a class="nav-link active" id="tab-home" href="#home" data-bs-toggle="tab" role="tab" aria-controls="home">Home</a>
+      <a class="nav-link" id="tab-bio" href="#bio" data-bs-toggle="tab" role="tab" aria-controls="bio">Bio</a>
+      <a class="nav-link" id="tab-teaching" href="#teaching" data-bs-toggle="tab" role="tab" aria-controls="teaching">Teaching</a>
+      <a class="nav-link" id="tab-random" href="#random" data-bs-toggle="tab" role="tab" aria-controls="random">Random</a>
     </div>
   </div>
 </nav>
@@ -52,7 +46,7 @@
 
     <div class="row">
       <div class="col-sm-3">
-        <img src="FBustamante.jpg" alt="Fabian E. Bustamante" class="leftFloat"
+        <img src="FBustamante.jpg" alt="Fabian E. Bustamante"
              width="188" height="230">
       </div>
 
@@ -101,7 +95,7 @@
 <!-- Tab panes -->
 <div class="container">
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
+    <div role="tabpanel" class="tab-pane active" id="home" aria-labelledby="tab-home">
 
       <figure>
 	<blockquote class="literary-quote">
@@ -138,7 +132,7 @@
 
     <!-- Bio -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane" id="bio">
+      <div role="tabpanel" class="tab-pane" id="bio" aria-labelledby="tab-bio">
 
         <p>Fabi&aacute;n E. Bustamante is a Professor of Computer Science at <a href="https://www.northwestern.edu">Northwestern University</a> and Co-founder and Chief Science Officer at <a href="https://kealu.com">Kealu, Inc.</a> Previously, he was Director of Research at <a href="https://phenixrts.com">Phenix Real Time Solutions</a> (2016&ndash;2024), a Chicago-based startup specializing in real-time video streaming at scale.</p>
 
@@ -151,7 +145,7 @@
 
     <!-- Teaching -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane" id="teaching">
+      <div role="tabpanel" class="tab-pane" id="teaching" aria-labelledby="tab-teaching">
         <h3>Teaching</h3>
 
         <dl>
@@ -174,7 +168,7 @@
 
     <!-- Random -->
     <div class="tab-content">
-            <div role="tabpanel" class="tab-pane" id="random">
+            <div role="tabpanel" class="tab-pane" id="random" aria-labelledby="tab-random">
 
                 <h3>Random Bits</h3>
 

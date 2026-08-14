@@ -47,3 +47,23 @@ body { padding-top: 70px; }
 .spaced-item {
   padding: 10px 0px;
 }
+/* Keep the tab strip on one line and let it scroll on narrow screens rather
+   than wrapping, which would push the fixed navbar over the page content. */
+.navbar .nav-tabs {
+  scrollbar-width: none;
+}
+.navbar .nav-tabs::-webkit-scrollbar { display: none; }
+
+@media (max-width: 575.98px) {
+  .navbar .nav-link { padding-left: .5rem; padding-right: .5rem; }
+}
+
+/* Tabs hide three quarters of the page from a printer. On paper there is no
+   one to click, so show every panel. */
+@media print {
+  body { padding-top: 0; }
+  .navbar { display: none; }
+  .tab-pane { display: block !important; opacity: 1 !important; }
+  .collapse { display: block !important; }
+  a { text-decoration: none; }
+}
