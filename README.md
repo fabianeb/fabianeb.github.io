@@ -12,6 +12,7 @@ Live at <https://fabianeb.github.io>.
 | `index.html` | Home — bio, teaching, and random-bits tabs |
 | `teaching.html` | Full course history |
 | `personal.html`, `academicTree.html`, `borgesyyo.html`, `borgesandi.html` | Secondary pages |
+| `404.html` | Shown by GitHub Pages for any URL that does not exist |
 | `css/custom.css` | The only stylesheet of our own; Bootstrap comes from the CDN |
 | `images/`, `FBustamante.png`, `AquaLab6.png` | Site images |
 | `vita/vita.pdf` | Current CV, built from the private `fabianeb/fabianb-site` repo |
@@ -24,6 +25,9 @@ There is no build step — what is in the repo is what is served.
 To refresh the CV, rebuild `vitae/` in `fabianeb/fabianb-site` and copy the
 resulting PDF over `vita/vita.pdf` here.
 
-All assets are local, so the site does not depend on
-`users.cs.northwestern.edu/~fabianb` — the two links to 2006/2008 course pages in
-`teaching.html` are the only remaining references to that server.
+All assets are local and nothing references `users.cs.northwestern.edu/~fabianb`,
+so the site is independent of the CS server.
+
+If the site ever moves to a custom domain, update the absolute URLs in
+`index.html`'s `og:url`, `og:image`, and `<link rel="canonical">` — everything
+else is relative and will follow on its own.
