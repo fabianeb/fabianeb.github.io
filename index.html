@@ -57,14 +57,14 @@
       </div>
 
       <div class="col-sm-7">
-        <h3>Fabi&aacute;n E. Bustamante</h3>
+        <h1 class="h3">Fabi&aacute;n E. Bustamante</h1>
 
-	<h4>Professor</h4>
-        <h6><a href="https://www.mccormick.northwestern.edu/eecs/computer-science/">Computer Science</a><br>
-	  <a href="https://www.northwestern.edu">Northwestern University</a></h6>
+	<h2 class="h4">Professor</h2>
+        <p class="h6"><a href="https://www.mccormick.northwestern.edu/eecs/computer-science/">Computer Science</a><br>
+	  <a href="https://www.northwestern.edu">Northwestern University</a></p>
 
-	<h4>Co-founder &amp; Chief Science Officer</h4>
-        <h6><a href="https://kealu.com">Kealu, Inc.</a></h6>
+	<h2 class="h4">Co-founder &amp; Chief Science Officer</h2>
+        <p class="h6"><a href="https://kealu.com">Kealu, Inc.</a></p>
 
         <div class="mt-3">
           <a href="https://scholar.google.com/citations?user=vg76M1oAAAAJ&hl=en" class="me-2" title="Google Scholar"><span class="bi bi-mortarboard-fill"></span> Google Scholar</a>
@@ -72,7 +72,8 @@
           <a href="vita/vita.pdf" class="me-2" title="CV"><span class="bi bi-file-earmark-person"></span> CV</a>
         </div>
 
-        <a class="btn btn-light mt-2" data-bs-toggle="collapse" href="#contact-info" role="button"><span class="bi bi-signpost-2-fill"></span></a>
+        <a class="btn btn-light mt-2" data-bs-toggle="collapse" href="#contact-info" role="button"
+           aria-expanded="false" aria-controls="contact-info"><span class="bi bi-signpost-2-fill"></span> Contact</a>
         <div class="collapse" id="contact-info">
           <address>
             <div class="row">
@@ -234,6 +235,32 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Make the tabs linkable: open the tab named in the URL hash, and keep the
+  // hash in step as tabs are clicked so the address bar can always be copied.
+  (function () {
+    function tabFor(hash) {
+      if (!hash || !/^#[\w-]+$/.test(hash)) return null;
+      return document.querySelector('.nav-link[data-bs-toggle="tab"][href="' + hash + '"]');
+    }
+
+    function show(hash) {
+      var trigger = tabFor(hash);
+      if (trigger) bootstrap.Tab.getOrCreateInstance(trigger).show();
+    }
+
+    show(window.location.hash);
+    window.addEventListener('hashchange', function () { show(window.location.hash); });
+
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach(function (el) {
+      el.addEventListener('shown.bs.tab', function (e) {
+        // replaceState throws on file:// URLs, where the hash is cosmetic anyway.
+        try { history.replaceState(null, '', e.target.getAttribute('href')); } catch (err) {}
+      });
+    });
+  })();
+</script>
 </body>
 
 </html>
